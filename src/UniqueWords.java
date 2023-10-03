@@ -1,3 +1,8 @@
+/* Project: Lab2
+ * Class: UniqueWords.java
+ * Author: Vincent Lynaugh
+ * Date: OCtober 2, 2023
+ */
 import java.util.ArrayList;
 
 public class UniqueWords
@@ -10,12 +15,13 @@ public class UniqueWords
    public static int countUnique(ArrayList<String> list)
    {
 	  int count = 0;
-	  
-      for (int i = 0; i < list.size(); i++)
-      {		 for (int j = 0; j < list.size(); j++)
-		 {
-			
-		 }
+	  ArrayList <String> unique = new ArrayList<>();
+      for (int i = 0; i < list.size(); i++) 
+      {
+    	  if(!unique.contains(list.get(i))) {
+    		  unique.add(list.get(i));
+    		  count++;
+    	  }
       }
 	  return count;
    }
